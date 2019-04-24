@@ -29,8 +29,6 @@ Download and unzip [`BERT-Base, Multilingual Cased`](https://storage.googleapis.
 1 worker need 1G RAM, example: GTX 1060 6G can open 4 workers max.
 
 ```sh
-# Activate virtualenv
-$ pipenv shell
 # Start server at localhost:8125
 $ pipenv run bert-serving-start -model_dir=./models/multi_cased_L-12_H-768_A-12 -num_worker=4 -http_port=8125 -http_max_connect=20
 ```
