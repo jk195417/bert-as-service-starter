@@ -20,14 +20,14 @@ This starter include a Pipfile to install tensorflow + bert-serving-server.
 
 ## Setup
 
-Clone this starter
+Clone this starter:
 
 ```sh
 $ git clone https://github.com/jk195417/bert-as-service-starter.git
 $ cd bert-as-service-starter
 ```
 
-Install dependencies
+Install dependencies:
 
 ```sh
 $ pipenv update
