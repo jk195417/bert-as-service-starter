@@ -19,7 +19,7 @@ Clone this starter
 
 ```sh
 $ git clone https://github.com/jk195417/bert-as-service-starter.git
-$ cd bert-as-service
+$ cd bert-as-service-starter
 $ pipenv update
 ```
 Download and unzip [`BERT-Base, Multilingual Cased`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) into `/models` dir
