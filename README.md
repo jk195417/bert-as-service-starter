@@ -1,9 +1,9 @@
 # bert-as-service-starter
 
-This starter include a Pipfile to install TensorFlow with GPU support + bert-as-service, and the `BERT-Base, Multilingual Cased` model.
+This starter include a Pipfile to install tensorflow + bert-serving-server.
 
-- tensorflow-gpu, read: https://www.tensorflow.org/install/gpu
-- bert-as-service http server, from https://github.com/hanxiao/bert-as-service
+- tensorflow 1.12.0 (using gpu support version as default), read: https://www.tensorflow.org/install
+- bert-serving-server http, from https://github.com/hanxiao/bert-as-service
 - bert model [`BERT-Base, Multilingual Cased`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip), from: https://github.com/google-research/bert
 
 ## Requirments
@@ -11,7 +11,12 @@ This starter include a Pipfile to install TensorFlow with GPU support + bert-as-
 - Git
 - Python3
 - pipenv
-- GPU(hardware + driver + CUDA + CUDNN)
+
+### GPU supprt Requirments
+
+- Nvidia GPU
+- CUDA 9.0
+- CUDNN 7.4.2
 
 ## Setup
 
@@ -20,9 +25,24 @@ Clone this starter
 ```sh
 $ git clone https://github.com/jk195417/bert-as-service-starter.git
 $ cd bert-as-service-starter
+```
+
+Install dependencies
+
+```sh
 $ pipenv update
 ```
+
 Download and unzip [`BERT-Base, Multilingual Cased`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) into `/models` dir
+
+### None GPU support
+
+If you don't want GPU support:
+
+```sh
+$ pipenv uninstall tensorflow-gpu
+$ pipenv install tensorflow
+```
 
 ## Usage
 
